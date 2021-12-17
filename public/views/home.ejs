@@ -1,0 +1,125 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Easy Cheesy!</title>
+    <link rel="stylesheet" href="/css/landing.css">
+    <h5 style="display: none">Welcome To Easy Cheesy - Homepage</h5>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context":"http://schema.org/",
+        "@type":"AboutPage",
+        "mainContentOfPage":{
+            "@type":"WebPageElement",
+            "about":"Easy Cheesy - Online Custom Pizza Ordering",
+            "abstract":"Easy Cheesy - Create and Customize your own Pizza, and we deliver the Pizza of your Dreams at your Doorsteps in a Jiffy!
+                        Offering you The Most Mind-blowing, Mouth-watering and Finest Quality Meal Experience at the Best Prices.",
+            "character":"Pizza Genie",
+            "contentLocation":
+            {
+                "@type":"Place",
+                "address":"A4, SoBo Center, South Bopal, Ahmedabad, Gujarat 380058",
+                "telephone":
+                [
+                    "91-9824301588",
+                    "91-8200063999"
+                ],
+                "latitude":"23.017106", 
+                "longitude":"72.475934", 
+                "specialOpeningHoursSpecification":{
+                    "@type":"OpeningHoursSpecification",
+                    "opens":"10:00",
+                    "closes":"11:00",
+                    "dayOfWeek":
+                    [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday",
+                        "Saturday",
+                        "Sunday"
+                    ]
+                }   
+            } 	
+        },
+        "specialty":"Create, Customize and Order your Dream Pizza",
+        "contentRating":"5",
+        "keywords":
+        [
+            "Easy Cheesy",
+            "Dream Pizza",
+            "Customize Your Pizza",
+            "Finest Quality Meal",
+            "Best Prices",
+            "Choose Crust, Sauce, Cheese, Toppings",
+            "Order Online",
+            "Best Pizza Ahmedabad"
+        ],
+        "copyrightHolder":"Easy Cheesy",
+        "copyrightYear":"2021",
+        "dateCreated":"2021-03-01",
+        "creator":"Easy Cheesy Web Developer Team",
+        "lastReviewed":"2021-05-09",
+        "reviewedBy":"Easy Cheesy Web Developer Team"
+    }
+    </script>           
+</head>
+<body>
+    <article class="showcase" id="myShowcase">
+        <h1 style="display: none">Homepage - Main Content</h1>
+        <header>
+           <h2 style="display: none">Easy Cheesy Logo (gif)</h2>
+           <img class="logoIMG" src="img/logoGIF.gif" alt="Easy Cheesy Logo (gif)">
+           <section class="toggle"><h4 style="display: none">Toggle Sidebar</h4></section>
+        </header>
+        <video src="img/homepageFinal.mp4" muted autoplay></video>
+        <section class="aboutUs">
+            <hgroup>
+                <h1 style="display: none">About Us</h1>  
+                <h2 class="aboutUsTitle">Easy Cheesy</h2> 
+                <h5>Create and Order your Own Dream Pizza!</h5>
+            </hgroup>
+            <p> Hey You, Our Mozarella Fella! Tired of finding the Perfect Pizza with the flawless combination of toppings, crust, sauce and cheese?
+                There's always something missing, right? That one element that ruins your mood? <br> So here we come, your Pizza Geneie! 
+                Create and Customize your own Pizza, and we deliver the Pizza of your Dreams at your Doorsteps in a Jiffy! 
+                You can even get the chance of Naming your own Pizza and it can also get Featured among our Bestsellers!
+                We pledge to offer you The Most Mind-blowing, Mouth-watering and Finest Quality Meal Experience at the Best Prices.  
+                What are You Waiting for? Hurry UP! Get your Slice of Paradise NOW! </p>
+            <a href="/menu">Order Now</a>
+        </section>
+        <nav>
+            <h5 style="display: none">Contact Us - Social Media Links</h5>       
+            <ul class="social">
+                <li><a href="https://www.facebook.com/" target="_blank"><img src="https://i.ibb.co/x7P24fL/facebook.png" alt="Facebook Icon"></a></li>
+                <li><a href="https://twitter.com/" target="_blank"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png" alt="Twitter Icon"></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank"><img src="https://i.ibb.co/ySwtH4B/instagram.png" alt="Instagram Icon"></a></li>
+            </ul>
+        </nav>
+    </article>
+    <aside class="menu"> 
+        <h5 style="display: none">Homepage - Sidebar Content</h5>            
+        <ul>
+        <li> <section class="toggle-active" id="myToggle"><h4 style="display: none">Toggle Sidebar</h4></section></li>
+        <li><a href="/register">Sign Up</a></li>    
+        <li><a href="/login">Sign In</a></li>
+        <li><a href="/cardEx">Create Your Own Pizza</a></li>
+        <li><a href="/faq">Frequently Asked Questions</a></li>
+        <li><a href="/term">Terms And Conditions</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        </ul>
+    </aside>
+    <script>
+
+        $(".toggle").click(function () {
+        $(".showcase").toggleClass("active");
+        });
+
+        $(".toggle-active").click(function () {
+        $(".showcase").toggleClass("active");
+        });
+
+
+    </script>
+</body>
+</html>

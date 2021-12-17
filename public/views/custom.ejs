@@ -1,0 +1,45 @@
+<html lang="en">
+    <link rel="stylesheet" href="/css/menu.css" type="text/css">
+    <link rel="stylesheet" href="/css/custom_pizza.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <header>
+      <script src="/js/custom.js" type="module"></script>
+      <nav class="nav">
+        <ul class="nav__menu">
+          <li class='nav__submenu-item_img'><a href="/home">
+            <img src="/img/logo.png" style="height: 60px;"></a></li>
+            <li class="cart_icon"><a href="/cart">
+                <span id="cart_count">
+                  <%= session.cart ? session.cart.totalQty : '' %>
+                </span>
+                <img src="/img/cart-black.png"></a>
+            </li>
+            <li class="nav__menu-item"><a>Contact Us</a></li>
+            <li class="nav__menu-item"><a>FAQ</a>
+            </li>
+            <li class="nav__menu-item"><a>About</a>
+            </li>
+            <li class="nav__menu-item"><a href="/customer/Myorders" style="text-decoration: none; ">My Orders</a></li>
+            <li class="nav__menu-item"><a href="/">Home</a></li>
+        </ul>
+    </nav>
+  </header>
+  <section id="customArea" class="row">
+      <aside id="sidebar" class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 overflow-scroll">
+          <nav id="cpelement_nav">
+              <ul id="cpelement_ul"></ul>
+          </nav>
+      </aside>
+          
+      <section id="mainArea" class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 ">
+          <canvas id="customPizzaCanvas"></canvas>
+      </section>
+
+      <div id="buttondiv" class="d-flex flex-row-reverse bd-highlight">
+          <h4 id="priceLabel" class="content_price">Total price: ₹ 125</h4>
+          <button id="btnPrev" class="btn btn-success">Previous</button>
+          <button id="btnNext" class="btn btn-success" >Next</button>
+      </div>
+  </section>
+</html>

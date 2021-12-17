@@ -1,0 +1,52 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background: orange;
+  background-image: url("/css/pizza1ftc.jpg");
+  height: 500px; 
+  background-position: center;
+  background-repeat: repeat; 
+  background-size: cover;
+  color: white;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  text-align: center;
+  height: 100vh;
+}
+main {
+  max-width: 520px;
+  margin: 0 auto;
+}
+#tc_heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  background-color: #FF4500;
+  border-style:solid;
+  border-color: rgb(255, 166, 0);
+  color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+  border-radius: 0.25rem;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+
+#tc_content
+{
+ font-size: 1.25rem;
+  font-weight: 600;
+  background-color: rgb(255, 166, 0);
+  border-style:solid;
+  border-color: rgb(255,102,0);
+  color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+  border-radius: 0.25rem;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}

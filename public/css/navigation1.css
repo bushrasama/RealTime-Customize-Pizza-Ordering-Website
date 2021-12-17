@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+img {
+  display: block;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 20%;
+}
+/*body{
+  background: white;
+}*/
+
+nav{
+  background: #841e1e;
+  top:0;
+  position:relative;
+  width: 100vw;
+  margin-bottom: 2%;
+}
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+nav .logo{
+  float: left;
+  color: white;
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 70px;
+  padding-left: 30px;
+}
+nav ul{
+  float: right;
+  margin-right: 40px;
+  list-style: none;
+  position: relative;
+}
+nav ul li{
+  float: left;
+  display: inline-block;
+  background: #841e1e;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 18px;
+  /*padding: 8px 15px;*/
+  padding-right: 0px;
+}
+nav ul li a:hover{
+  color: orange;
+  border-radius: 5px;
+}
+nav ul ul li a:hover{
+  box-shadow: none;
+}
+nav ul ul{
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid #841e1e;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  position: relative;
+  margin: 0px;
+  width: 150px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid orange;
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+.show,.icon,input{
+  display: none;
+}
+.fa-plus{
+  font-size: 15px;
+  margin-left: 40px;
+}
+
+@media all and (max-width: 968px) {
+  nav ul{
+    margin-right: 0px;
+    float: left;
+  }
+  nav .logo{
+    padding-left: 30px;
+    width: 100%;
+  }
+  .show + a, ul{
+    display: none;
+  }
+  nav ul li,nav ul ul li{
+    display: block;
+    width: 100%;
+  }
+  nav ul li a:hover{
+    box-shadow: none;
+  }
+  .show{
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 10 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show:hover{
+    color: orange;
+  }
+  .icon{
+    display: block;
+    color: orange;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    line-height: 70px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  nav ul ul{
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul a{
+    padding-left: 40px;
+  }
+  nav ul ul ul a{
+    padding-left: 80px;
+  }
+  nav ul ul ul li{
+    position: static;
+  }
+  [id^=btn]:checked + ul{
+    display: block;
+  }
+  nav ul ul li{
+    border-bottom: 0px;
+  }
+  span.cancel:before{
+    content: '\f00d';
+  }
+}
+/*cart*/
+.cart_icon{
+  flex-direction: row;
+  align-items: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 7px;
+  display: inline-block;
+  padding-top: 10px;
+  padding-left: 10px;
+  border-radius: 9999px;
+  /*float: right;*/
+  background-color: white;
+  height: 50px;
+  width: 70px;
+}
+.empty_cart{
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+.cart_container{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cart_head{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.static{
+  margin-left: auto;
+  margin-right: auto;
+}
+.cart_card{
+  display:flex;
+  justify-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.inside_Card{
+  flex: 1 1 0%;
+  margin-left: 1rem;
+}
