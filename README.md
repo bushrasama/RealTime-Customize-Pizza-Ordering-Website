@@ -1,0 +1,2 @@
+# RealTime-Customize-Pizza-Ordering-Website
+Easy Cheesy - Customized Pizza Ordering Website is a web-based application developed in JavaScript programming language. The main aim of the project is to give the user full right from choosing the type of the crust to selecting each and every topping while viewing the visual appearance of the desired pizza on every step, in this manner the user will be the one in full control for customizing and ordering his/her own pizza.
