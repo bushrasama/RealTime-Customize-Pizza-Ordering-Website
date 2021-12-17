@@ -1,0 +1,73 @@
+Arguments: 
+  C:\Program Files (x86)\nodejs\node.exe C:\Users\aarya\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  C:\ProgramData\Oracle\Java\javapath;C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin;C:\Python39\Scripts\;C:\Python39\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Android;C:\Windows\System32;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\PostgreSQL\13\lib;C:\Program Files\PostgreSQL\13\bin;C:\ProgramData\chocolatey\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;%NVM_HOME%;%NVM_SYMLINK%;C:\Program Files (x86)\nodejs\;C:\Program Files\Git\cmd;C:\Users\aarya\AppData\Local\Microsoft\WindowsApps;C:\Users\aarya\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\aarya\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\aarya\AppData\Roaming\npm;C:\Users\aarya\AppData\Local\GitHubDesktop\bin;C:\Program Files\heroku\bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  16.0.0
+
+Platform: 
+  win32 ia32
+
+Trace: 
+  SyntaxError: C:\Users\aarya\AppData\Local\Yarn\Cache\v6\npm-public-encrypt-4.0.3-4fcc9d77a07e48ba7527e7cbe0de33d0701331e0-integrity\node_modules\public-encrypt\.yarn-metadata.json: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at C:\Users\aarya\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\aarya\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\aarya\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "pizzaaaaa",
+    "version": "1.0.0",
+    "description": "pizza Delivery application",
+    "main": "index.js",
+    "author": "Aaryannnn",
+    "license": "MIT",
+    "engines": {
+      "node": ">=16.0.0"
+    },
+    "scripts": {
+      "serv": "node server.js",
+      "dev": "nodemon server.js",
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "axios": "^0.21.1",
+      "bcryptjs": "^2.4.3",
+      "connect-mongo": "^3.2.0",
+      "dotenv": "^8.2.0",
+      "ejs": "^3.1.6",
+      "express": "^4.17.1",
+      "express-ejs-layouts": "^2.5.0",
+      "express-flash": "^0.0.2",
+      "express-session": "^1.17.1",
+      "flash": "^1.1.0",
+      "git": "^0.1.5",
+      "html": "^1.0.0",
+      "laravel-mix": "^6.0.18",
+      "moment": "^2.29.1",
+      "mongoose": "^5.12.7",
+      "nodemon": "^2.0.7",
+      "noty": "^3.2.0-beta-deprecated",
+      "passport": "^0.4.1",
+      "passport-local": "^1.0.0",
+      "path": "^0.12.7",
+      "postcss": "8.1",
+      "socket.io": "^4.0.2",
+      "sweetalert": "^2.1.2",
+      "sweetalert2": "^10.16.7",
+      "tailwindcss": "^2.1.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
