@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .cartTotals a{
+    display: inline-block;
+    margin-top: 5%;
+    font-size: 0.7em;
+    background: rgb(3, 62, 255);
+    border-style:solid;
+    border-color: rgb(184, 242, 247); 
+    padding: 10px 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    color:white;
+    letter-spacing: 1px;
+    transition: 0.2s;
+  }
+  .cartTotals a:hover
+  {
+    letter-spacing: 2px;
+  }

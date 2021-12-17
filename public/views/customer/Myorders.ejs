@@ -1,0 +1,46 @@
+<html>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>    
+<link( href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,300' rel='stylesheet' type='text/css' )  >
+<link href="/css/Myorderes.css" rel="stylesheet" type="text/css">
+<script src="/js/app.js" type="module"></script>
+<h1 style="text-align: center;">My orders</h1>     
+<body>
+        <table>
+            
+            <% if(messages.success) { %>
+                <section id="orderNotification" role="alert">
+                    <h5 style="display: none;">Order Placed Notification</h5>
+                    <b><i>i</i> &nbsp; &nbsp;Order Placed Successfully</b>
+                </section>
+                
+            <% } %>
+            
+            <thead>
+            <tr>
+                <th scope="col">Orders</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Date</th>
+                <th scope="col">Time</th>
+            </tr>
+            </thead>
+            <tbody>
+                <% if(orders.length) { %>
+                    <% orders.forEach((order)=>{ %>
+                        <tr>
+                            <td data-label="Orders" class="link"><a href="/customer/Myorders/<%= order._id %>"><%= order._id %> </td>
+                            <td data-label="Address"><%= order.phone %></td>
+                            <td data-label="Date">Date</td>
+                            <td data-label="Time"><%= moment(order.createdAt).format('hh:mm A') %></td>
+                        </tr>
+                <% }) %>       
+            <% } else { %>
+                <tr>
+                    <td><span>NO ORDERS FOUND</span></td>
+                </tr>
+                
+            <% } %>
+            
+            </tbody>
+        </table>
+    </body>
+</html>

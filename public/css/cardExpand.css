@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Lobster';
+}
+
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+    transform: rotateX('-10deg');
+  }
+  to{
+    opacity: 1;
+    transform: rotateX('0');
+  }
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-image: linear-gradient(rgb(255, 145, 0), rgb(255, 208, 0));
+  animation: fadeIn 0.75s;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+  text-shadow: 1.5px 1.5px rgb(255, 54, 54);
+}
+
+.pizzaBannerArticle a
+{
+  display: inline-block;
+  font-size: 1em;
+  background: rgb(255, 3, 3);
+  border-style:solid;
+  border-color: rgb(255, 166, 0); 
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 1px;
+  transition: 0.2s;
+  font-family: 'Poppins', sans-serif;
+  float: right;
+}
+
+.pizzaBannerArticle a:hover
+{
+  letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+
+  .panel.active h3
+  {
+    font-size: 15px;
+  }
+
+  .pizzaBannerArticle a
+  {
+    font-size: 0.8em;
+  }
+}

@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+
+}
+
+a {
+  text-align: center;
+  display: block;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+h1 {
+  width: 500px;
+  margin: 100px auto 20px;
+  color: #000000;
+  font-size: 40px;
+  text-align: center;
+}
+.nav {
+  width: 100%;
+  margin: 0 auto;
+  background: #841e1e;
+  color: #f0f0f0;
+  height: 78px;
+}
+.nav a {
+  display: block;
+  padding: 0 16px;
+  line-height: inherit;
+  cursor: pointer;
+}
+.nav__menu {
+  line-height: 45px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.nav__menu-item {
+  display: inline-block;
+  float: right;
+}
+.nav__submenu-item_img{
+  display: inline-block;
+  float: left;
+}
+.nav__menu-item:hover {
+  background-color: #000000;
+}
+.nav__menu-item:hover .nav__submenu {
+  display: block;
+}
+.nav__submenu {
+  font-weight: 300;
+  text-transform: none;
+  display: none;
+  position: absolute;
+  width: 220px;
+  background-color: #000000;
+}
+.nav__submenu-item:hover {
+  background: rgba(0, 0, 0, 0.1);
+
+}
+
+.cart_icon{
+  flex-direction: row;
+  align-items: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 7px;
+  display: inline-block;
+  padding-top: 2px;
+  border-radius: 9999px;
+  float: right;
+  background-color: white;
+  height: 60px
+  
+}
+.empty_cart{
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+.cart_container{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cart_head{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.static{
+  margin-left: auto;
+  margin-right: auto;
+}
+.cart_card{
+  display:flex;
+  justify-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.inside_Card{
+  flex: 1 1 0%;
+  margin-left: 1rem;
+}
+
+
+
+h1
+{
+    color: rgb(233, 21, 21);
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: 1.5px 1.5px rgba(194, 5, 5, 0.918);
+}
+
+.myOrder
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(232, 255, 224);
+    padding: 1%;
+    width: 75vw;
+    border: 1px;
+    border-radius: 5px;
+    margin: 0.8% 0.8%;
+    box-shadow: 0 4px 4px 0 rgb(183, 248, 161);
+}
+
+h3
+{
+    font-size: 1.1em;
+}
+
+.myOrder .orderDescription
+{
+    list-style-type: none;
+}
+
+.orderDescription .orderIngredientsL1, .orderIngredientsL2, .orderIngredientsL3
+{
+    font-size: small;
+}
+
+.myOrder .orderQuantity, .orderPrice
+{
+    margin-left: 20vw;
+}
+
+.orderIMG
+{
+    height:20vh;
+    width:20vh;
+}
+
+.cartTotals
+{
+    width:18vw;
+    float:right;
+    background-color: rgb(224, 238, 255);
+    padding: 1% 0.28%;
+    margin: 0.8% 0.8%;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px 0 rgb(150, 193, 247);
+}
+
+.cartTotals .check_btn
+{
+  display: inline-block;
+  margin-top: 5%;
+  font-size: 0.7em;
+  background: rgb(3, 62, 255);
+  border-style:solid;
+  border-color: rgb(184, 242, 247); 
+  padding: 10px 25px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  color:white;
+  letter-spacing: 1px;
+  transition: 0.2s;
+}
+
+.cartTotals .check_btn:hover
+{
+  letter-spacing: 2px;
+}
+
+hr
+{
+    border : 0;
+    height: 1px; 
+    background-image: linear-gradient(to right, rgba(184, 242, 247, 0.5), rgb(3, 62, 255), rgba(184, 242, 247, 0.1)); 
+}
+
+@media (max-width: 991px)
+{
+    .myOrder
+    {
+        width:60vw;
+        font-size: 0.8em;
+        margin-top: 1.2%;
+    }
+    .orderDescription .orderIngredientsL1, .orderIngredientsL2, .orderIngredientsL3
+    {
+        font-size: smaller;
+    }
+    .myOrder .orderIMG
+    {
+        height:25%;
+        width:25%;
+    }
+    .myOrder .orderQuantity, .orderPrice
+    {
+        margin-left: 8vw;
+    }
+    .cartTotals
+    {
+        width:32vw;
+    }
+}
+
+

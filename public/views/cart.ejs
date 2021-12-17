@@ -1,0 +1,76 @@
+<html>
+<link( href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,300' rel='stylesheet' type='text/css' )  >
+<link href="/css/cart.css" rel="stylesheet" type="text/css">
+<script src="/js/app.js" type="module"></script>
+<article class="flex-container">
+<nav class="nav">
+    <ul class="nav__menu">
+        <li class='nav__submenu-item_img'><a href="/home">
+            <img src="/img/logo.png" style="height : 100px"></a></li>
+
+            <li class="nav__menu-item"><a>Contact Us</a></li>
+            <li class="nav__menu-item"><a>Services</a>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"> <a>Web Design</a></li>
+                    <li class="nav__submenu-item"> <a>Web Development</a></li>
+                    <li class="nav__submenu-item"> <a>Web Hosting</a></li>
+                </ul>
+            </li>
+            <li class="nav__menu-item"><a>About</a>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"> <a>Our Company</a></li>
+                    <li class="nav__submenu-item"> <a>Our Team</a></li>
+                    <li class="nav__submenu-item"> <a>Our Reach</a></li>
+                </ul>
+            </li>
+            <li class="nav__menu-item"><a>Blog</a></li>
+            <li class="nav__menu-item"><a>Home</a></li>
+        </ul>
+</nav>
+<aside class="cartTotals">
+    <p><h3><center>CART TOTALS</center></h3>
+        Subtotal: ₹<%= session.cart.totalPrice %><br>
+        Delivery Charges: ₹50<br>
+        <hr>
+        Total: ₹<%= session.cart.totalPrice + 50 %><br>
+        <% if(user){  %>
+            <center><a type="submit" class="check_btn" href="/checkout">Proceed to Checkout</a></center>
+        <% } else { %>
+            <center><a href="/login">You need to login to checkout</a></center>
+            <% } %>
+    </p>
+</aside>
+<section class="allOrders">
+    <h5 style="visibility: hidden; font-size: 0%">ORDER DETAILS</h5>    
+    <% for(let pizza of Object.values(session.cart.items)) { %>
+    <section class="myOrder">
+        <img class="orderIMG" src="/img/pizza/<%= pizza.item.image %>">
+        <ul class="orderDescription">
+            <li class="orderName"><h3><%= pizza.item.name %></h3></li>
+            <li class="orderSize">Medium</li>
+            <li class="orderIngredientsL1"><i>Onion, Tomato, Mushroom</i></li>
+            <li class="orderIngredientsL1"><i>Capsicum, Red Paprika</i></li>
+            <li class="orderIngredientsL3"><i>Jalapeno, Olive</i></li> 
+        </ul>    
+        <p class="orderQuantity">
+            <%= pizza.qty %>
+        </p>
+        <p class="orderPrice"> 
+            ₹<%= pizza.item.price * pizza.qty%>
+        </p>
+    </section>
+    <% } %>
+</section>
+<!--<section>
+    <div>
+    <div class="empty_Cart">
+        <div class="cart_container">
+            <h1 class='cart_head'>Cart Empty</h1>
+            <p>You Haven't ordered a pizza yet.<br>
+                To order a pizza, go to the menu page.</p>
+                <img class='static'src="/img/empty-cart.png"></div>
+        </div>
+    </div>
+</section>-->
+</article>
+</html>

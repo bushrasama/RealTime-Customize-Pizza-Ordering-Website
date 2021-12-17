@@ -1,0 +1,52 @@
+<html>
+    <link href="/css/checkout.css" rel="stylesheet" type="text/css">
+    <link( href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,300' rel='stylesheet' type='text/css' )  >
+    <body>
+        <section>
+            <form method="POST" action="/orders">
+            <table>
+                    <tr>
+                        <h2 class="title">Checkout Details</h2>
+                    </tr>   
+                    <tr>
+                        <td><label for="Name">Name<span>*</span></label></td>
+                        <td><input type="text" class="form-control" id="name_ip" name="name" size="50"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="EmailAddress">Email Address<span>*</span></label></td>
+                        <td><input type="email" class="form-control" id="email_ip" name="checkoutemail" size="50"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="PhoneNumber">Phone Number<span>*</span></label></td>
+                        <td><input type="text" class="form-control" id="phone_ip" name="phone" size="50"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Address">Address<span>*</span></label></td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="Street Address" name="address" id="address_main_ip" size="50">
+                            <input type="text" class="form-control" placeholder="Apartment, Suite, Unit etc. (optional)" id="address_main_ip" size="50">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="PostcodeZip">Post code / Zip<span>*</span></label></td>
+                        <td><input type="text" class="form-control" name="postcode" id="postcode_ip" size="50"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Town">Town / City<span class="req_fields">*</span></label></td>
+                        <td><input type="text" class="form-control" name="town" id="town_ip" size="50"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="OrderNotes">Order Notes</label></td>
+                        <td><textarea class="form-control" id="order_notes_ip" size="50"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <button type="submit" class="checkout-btn hvr-float-shadow" name="newlocation">Place Order</button>
+                        </td>
+                    </tr>
+                    <!---<button type="button" onclick="alert('Hi user!')">Press me!</button>-->
+                </table>
+            </form>
+        </section>
+    </body>
+</html>

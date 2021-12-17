@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap"); /*Imported fonts from googleapis fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+* /*Style applied to all elements of the webpage*/ {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header /*Header containing logo and sidebar toggle buttons*/ {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logoIMG {
+  height: 8%;
+  width: 8%;
+  cursor: pointer;
+}
+
+.toggle /*Default Class State toggled through Java Script for enabling the menu button when side bar is closed*/ {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url(https://i.ibb.co/HrfVRcx/menu.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.toggle-active /*(Pseudo-class) Class State toggled through Java Script for enabling the close button when side bar opens*/ {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url(https://i.ibb.co/rt3HybH/close.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.showcase /*Default Visible Content of the Webpage except the header, added as overlay over the video background*/ {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  z-index: 2;
+}
+
+.showcase.active /*Class added through Java Script for sending overlay content back, to make the sidebar hidden behind it appear*/ {
+  z-index: -10;
+}
+
+.showcase video /*Positioning the Video as the background of the webpage*/ {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.aboutUs {
+  position: absolute;
+  z-index: 10;
+}
+
+.aboutUs h2 /*Styling individual headings of the about us section*/ {
+  font-size: 5em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.aboutUs h5 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.aboutUs p {
+  font-size: 1.3em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  width: 75%;
+  text-align: justify;
+  font-family: "Lobster";
+}
+
+.aboutUs a /*Order Now Button Styling*/ {
+  display: inline-block;
+  font-size: 1em;
+  background: rgb(255, 3, 3);
+  border-style: solid;
+  border-color: rgb(255, 166, 0);
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+
+.aboutUs a:hover {
+  letter-spacing: 6px;
+}
+
+.social /*Social Media Link Icons*/ {
+  position: absolute;
+  z-index: 10;
+  bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  display: inline-block;
+  margin-right: 20px;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+
+.social li a:hover {
+  transform: scale(0.5) translateY(-15px);
+}
+
+.menu /*Menu hidden behind the showcase due to default low z-index, appears when active class added through Javascript*/ {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: linear-gradient(rgb(255, 145, 0), rgb(255, 208, 0));
+  overflow: auto;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.menu ul {
+  position: relative;
+}
+
+.menu ul li {
+  list-style: none;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  height: 15vh;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-size: 1em;
+  color: #111;
+  text-shadow: 2px 2px rgba(255, 149, 50, 0.918);
+}
+
+.menu ul li a:hover {
+  color: white;
+  font-size: 1.2em;
+}
+
+.aboutUsTitle /*Extra text shadow for the homepage title*/ {
+  text-shadow: 3px 3px rgba(255, 149, 50, 0.918);
+}
+
+.menu img {
+  height: 16px;
+  width: 16px;
+}
+
+@media (max-width: 991px) /*Media Query to add responsiveness when width of the screen is below 991px*/ {
+  .showcase,
+  .showcase header {
+    padding: 10px;
+  }
+  .aboutUs h2 {
+    font-size: 5em;
+    margin-top: 5vh;
+  }
+  .aboutUs h5,
+  a {
+    font-size: 2.4em;
+  }
+  .aboutUs p {
+    font-size: 2.4em;
+  }
+  header .logoIMG {
+    height: 10%;
+    width: 10%;
+    cursor: pointer;
+  }
+}
